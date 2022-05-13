@@ -1,10 +1,10 @@
 import React, {createContext, useState} from 'react';
 import ReactDOM from 'react-dom';
-import {BasketItem} from '../interfaces/BasketItem';
+import {BasketItem} from './interfaces/BasketItem';
 import {Header} from './components/Header/Header';
 import {Shop} from './components/Shop/Shop';
 import {Basket} from './components/Basket/Basket';
-import {Footer} from './common/Footer';
+import {Footer} from './components/common/Footer/Footer';
 
 import {items} from './utils/dummy-items';
 import classes from './App.module.css';
