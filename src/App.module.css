@@ -1,0 +1,9 @@
+.App {
+  min-height: calc(100vh - 30px);
+  text-align: center;
+}
+
+.blocked-styles {
+  height: calc(100vh - 30px);
+  overflow: hidden;
+}

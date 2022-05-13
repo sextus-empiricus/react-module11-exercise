@@ -1,13 +1,38 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  /*colors:*/
+  --white: #f7efe6;
+  --background-color: #3b2f2f;
+  --bar-color: rgb(44, 128, 61);
+  /*sizes:*/
+  --bar-height: 80px;
+  --bar-height__mobile: 50px;
+  --bar-basket-height: 25px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Cinzel', sans-serif;
+  font-size: 10px;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(0deg, black 0%, var(--background-color) 50%)
+}
+
+html::-webkit-scrollbar {
+  width: 10px; /* Mostly for vertical scrollbars */
+  height: 10px; /* Mostly for horizontal scrollbars */
+}
+html::-webkit-scrollbar-thumb { /* Foreground */
+  background: #999;
+}
+html::-webkit-scrollbar-track { /* Background */
+  background: #333;
 }
