@@ -22,3 +22,6 @@ My try before studying the module.
 ### 💡for future projects:
 1. more professional git approach,
 2. when creating start testing on crucial points
+
+### DEMO:
+https://react-course-project-module11.herokuapp.com/
