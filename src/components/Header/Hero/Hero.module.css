@@ -1,0 +1,81 @@
+.hero-shadow {
+    display: none;
+    position: absolute;
+    top: var(--bar-height);
+    left: 0;
+    height: 30vh;
+    width: 100%;
+    background-color: black;
+    opacity: .5;
+}
+
+.hero {
+    height: 30vh;
+    width: 100vw;
+
+    background-image: url("../../../../public/Images/background.png");
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero::after {
+    content: '';
+    height: 2000px;
+    width: 100%;
+
+    position: absolute;
+    bottom: var(--bar-height);
+    left: 200px;
+    background-color: transparent;
+
+    border-style: solid;
+    border-bottom-width: 40em;
+    border-bottom-color: var(--background-color);
+    border-left-width: 500em;
+    border-left-color: transparent;
+}
+
+.hero-title-mobile {
+    display: none;
+}
+
+.hero-bottom {
+    position: relative;
+    height: var(--bar-height);
+    background-color: var(--background-color);
+}
+
+@media (max-width: 1000px) {
+}
+
+@media (max-width: 600px) {
+    .hero-shadow {
+        display: block;
+        top: var(--bar-height__mobile);
+    }
+
+    .hero {
+        margin-top: var(--bar-height__mobile);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-title-mobile {
+        margin: 70px;
+        display: block;
+        font-size: 2.5em;
+        color: var(--white);
+        z-index: 1;
+    }
+
+    .hero-bottom {
+        display: none;
+    }
+
+    .hero::after {
+        display: none;
+    }
+
+}

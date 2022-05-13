@@ -1,0 +1,82 @@
+.td-index {
+    text-align: center;
+    border: none;
+}
+
+.td-amount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.td-price {
+    text-align: center;
+}
+
+.td-sum {
+    text-align: right;
+    padding-right: 20px;
+}
+
+.trash-icon {
+    padding: 5px 10px;
+    margin-left: 10px;
+    font-size: 1.7rem;
+    color: #977d7d;
+}
+
+.trash-icon:hover {
+    cursor: pointer;
+    color: #bba9a9;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+
+}
+
+@media (max-width: 600px) {
+    thead {
+        display: none;
+    }
+
+    tbody {
+        margin: 0 5px;
+    }
+
+    tbody, tr, td {
+        display: block;
+        /*width: 100%;*/
+    }
+
+    tr {
+        margin-bottom: 15px;
+    }
+
+    td {
+        text-align: right;
+        padding-left: 50%;
+    }
+
+    td::before {
+        content: attr(data-label);
+        font-size: 2rem;
+        color: grey;
+        position: absolute;
+        left: 10vw;
+    }
+
+    .td-index {
+        display: none;
+    }
+
+    .td-amount {
+        flex-direction: row-reverse;
+        justify-content: right;
+        padding-right: 0;
+    }
+
+    .td-price {
+        text-align: right;
+    }
+}
+

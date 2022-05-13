@@ -1,0 +1,38 @@
+.Bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px;
+
+    align-items: center;
+    height: var(--bar-height);
+
+    background: linear-gradient(45deg, #5eac6e -5%, var(--bar-color) 38%, #e4a766 95%);
+    z-index: 1;
+}
+
+.Bar h1 {
+    font-size: 3em;
+    color: var(--white);
+}
+
+@media (max-width: 1000px) {
+    .Bar {
+        padding: 0 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .Bar {
+        position: fixed;
+        top: 0;
+        padding: 0;
+        height: var(--bar-height__mobile);
+        width: 100vw;
+        z-index: 5;
+    }
+
+    .Bar h1 {
+        margin-left: 10px;
+        font-size: 2em;
+    }
+}

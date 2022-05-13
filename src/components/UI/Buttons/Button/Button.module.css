@@ -1,0 +1,36 @@
+.button {
+    display: block;
+    margin-top: 5px;
+    height: 40px;
+    min-width: 110px;
+
+    font-family: inherit;
+    font-size: 0.6em;
+    font-weight: 600;
+    color: var(--white);
+    text-shadow: 2px 2px 1px #262121;
+
+    background: linear-gradient(270deg, rgb(103 50 50) -26%, rgb(103 50 50) 30%, rgba(20, 15, 15, 0.8) 140%);
+
+    border: 1px solid #3b2f2fba;
+    border-radius: 5px;
+
+    user-select: none;
+    z-index: 3;
+}
+
+.button:hover {
+    cursor: pointer;
+    background: linear-gradient(320deg, rgba(20, 15, 15, 0.8) -26%, rgb(159 109 52 / 80%) 18%, rgba(20, 15, 15, 0.8) 140%);
+
+}
+
+.button:focus {
+    outline: none;
+}
+
+@media (max-width: 600px) {
+    button {
+        width: 200px;
+    }
+}

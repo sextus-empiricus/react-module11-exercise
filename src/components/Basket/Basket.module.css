@@ -1,0 +1,216 @@
+.backdrop {
+    height: 100vh;
+    width: 100vw;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 10;
+    animation: fadeIn .3s ease-out;
+}
+
+.basket {
+    position: relative;
+
+    padding: 0;
+    height: 65vh;
+    width: 60vw;
+
+    font-size: 2em;
+
+    background-color: rgba(255, 255, 255, 0);
+
+    box-shadow: 0 0 10px black;
+    border-radius: 5px;
+    color: var(--white);
+}
+
+.basket p {
+    margin-left: 10px;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 200;
+    font-size: 1.3rem;
+}
+
+.basket::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
+    border-radius: 10px;
+
+    opacity: .2;
+    z-index: -1
+}
+
+.scrollbar-wrapper {
+    position: absolute;
+    top: var(--bar-basket-height);
+    left: 0;
+    width: 100%;
+    overflow-y: scroll;
+    height: 50vh;
+}
+
+.scrollbar-wrapper::-webkit-scrollbar {
+    width: 10px; /* Mostly for vertical scrollbars */
+    height: 10px; /* Mostly for horizontal scrollbars */
+}
+
+.scrollbar-wrapper::-webkit-scrollbar-thumb { /* Foreground */
+    background: #484848;
+}
+
+.scrollbar-wrapper::-webkit-scrollbar-track { /* Background */
+    background: #333;
+}
+
+.bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: var(--bar-basket-height);
+    width: 100%;
+    line-height: var(--bar-basket-height);
+
+    font-size: .7em;
+
+    box-shadow: 0 1px 3px rgba(35, 31, 31, 0.5);
+    background: linear-gradient(45deg, rgb(51 96 60) -5%, rgb(36 74 43) 38%, rgb(114 89 64) 95%);
+    border-radius: 2px 2px 0 0;
+}
+
+.close-button {
+    height: var(--bar-basket-height);
+    width: 30px;
+    line-height: var(--bar-basket-height);
+    text-align: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1rem;
+    user-select: none;
+}
+
+.close-button:hover {
+    cursor: pointer;
+    background-color: #b11d1d;
+}
+
+
+.basket-item {
+    border-bottom: 1px solid white;
+}
+
+td {
+    border-bottom: 1px solid rgba(86, 86, 86, 0.5);
+    padding: 5px;
+}
+
+
+.table {
+    margin-top: 10px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.th-index {
+    border: none;
+}
+
+.th-name {
+    min-width: 250px;
+}
+
+.th-sum {
+    padding-right: 20px;
+    width: 80px;
+    text-align: right;
+}
+
+.td-index {
+    border: none;
+}
+.td-amount {
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-button-wrapper {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: right;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .backdrop {
+        display: unset;
+        overflow-y: scroll;
+    }
+
+    .table {
+        margin: 20px auto auto;
+        width: 90vw;
+
+    }
+
+    .basket {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        width: 100vw;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 0;
+        overflow: scroll;
+    }
+
+    .basket::after {
+        border-radius: 0;
+    }
+
+    .scrollbar-wrapper {
+        height: 75vh;
+    }
+
+    .scrollbar-wrapper::-webkit-scrollbar {
+        width: 5px; /* Mostly for vertical scrollbars */
+        height: 10px; /* Mostly for horizontal scrollbars */
+    }
+
+    .order-button-wrapper {
+        bottom: 30px;
+    }
+}

@@ -1,0 +1,42 @@
+.hero-card {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    padding: 30px;
+    width: 800px;
+
+    background-color: #6a3232f0;
+
+    border-radius: 20px;
+    color: var(--white);
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.73);
+}
+
+.hero-card h2 {
+    font-weight: 600;
+    font-size: 3.5em;
+}
+
+.hero-card p {
+    margin-top: 10px;
+    font-size: 1.8em;
+}
+
+@media (max-width: 1000px) {
+    .hero-card {
+        /*top: */
+        width: 500px;
+
+    }
+
+    .hero-card h2 {
+        font-size: 2.5em;
+    }
+
+    .hero-card p {
+        font-size: 1.5em;
+    }
+
+}

@@ -1,0 +1,41 @@
+.box {
+    position: relative;
+
+    margin: 10px auto 50px;
+    padding: 30px;
+    width: 80vw;
+
+    background-color: rgba(255, 255, 255, 0);
+
+    box-shadow: 0 0 10px black;
+    border-radius: 10px;
+}
+
+.box::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
+    border-radius: 10px;
+
+    opacity: .3;
+    z-index: -1
+}
+
+@media (max-width: 600px) {
+    .box {
+        margin: 0 0 40px;
+        padding: 0;
+        width: auto;
+        border-radius: 0;
+    }
+
+    .box::after {
+        border-radius: 0;
+    }
+}
